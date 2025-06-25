@@ -1,3 +1,5 @@
+/*Function Overloading means creating multiple functions with the same
+ name but different parameters (type or number)*/
 #include<iostream>
 using namespace std;
  void display(int l ,int b){
