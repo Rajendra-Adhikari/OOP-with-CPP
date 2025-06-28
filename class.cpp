@@ -1,30 +1,23 @@
 #include<iostream>
 using namespace std;
-
 class Student {
 private:
-    int roll;
-    string name;
-
+    int roll;       // data member (private)
+    string name;    // data member (private)
 public:
-    // Constructor to initialize data
-    Student(int r, string n) {
+     void setData(int r, string n) {
         roll = r;
         name = n;
     }
 
-    // Member function to display data
     void display() {
-        cout << "Student Info -> Roll: " << roll << ", Name: " << name << endl;
+        cout << "Roll: " << roll << ", Name: " << name << endl;
     }
 };
 
 int main() {
-    // Object creation using constructor
-    Student student1(102, "Raj");
-
-    // Displaying data
-    student1.display();
-
+    Student s1;
+    s1.setData(101, "yogesh");
+    s1.display();
     return 0;
 }
