@@ -2,6 +2,7 @@
 #include<iostream>
 using namespace std;
 enum model {rock,wood,concrete};
+
 class home{
     private:
         int room_no;
@@ -19,7 +20,7 @@ class home{
             cout<<"safety is better"<<endl;
         }
     }  
-    void register_house(int r,string a,model m){
+     home(int r=0,string a="unknown",model m=rock){
       room_no =r;
       address=a;
       h_model= m;
@@ -40,7 +41,7 @@ class home{
 
 };
 int main(){
-    home h1;
+    
     int room_num;
     string add;
     model house_struct;
@@ -58,7 +59,8 @@ int main(){
         cout << "Invalid house model!" << endl;
         return 1;
     }
-    h1.register_house(room_num,add,house_struct);
+    home h1(room_num,add,house_struct);// parametrized constructor called
+    
    h1.show_house();
    h1.house_safety();
    
